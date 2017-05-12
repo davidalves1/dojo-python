@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 class Client:
 	def __init__(self, name, age):
 		self.name = name
@@ -31,4 +33,3 @@ class Account:
 			print("%s: R$%10.2f" % (op[0], op[1]))
 		
 		print("Saldo: R$%10.2f" % self.balance)
-
