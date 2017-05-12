@@ -1,2 +1,3 @@
 libs-dojo-python/
+*.pyc
 log.txt
