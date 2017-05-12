@@ -14,7 +14,6 @@ info = soup.find('div', class_='info')
 if info is None:
 	sys.exit('Informações não encontradas')
 
-
 paper = info.h1.get_text()
 employee = info.h2.get_text()
 
@@ -23,7 +22,9 @@ oscilation = soup.find('div', class_='oscilation')
 if oscilation is None:
 	sys.exit('Valor não encontradas')
 
-data = 'Papel: %s | Empresa: %s | Valor: %s' % (paper, employee, oscilation.get_text().strip())
+values = oscilation.get_text().strip().split()
+
+data = 'Ação: %s | Empresa: %s | Valor: R$ %s | Oscilação: %s' % (paper, employee, values[1], values[2])
 print(data)
 
 f = open('log.txt', 'a')
