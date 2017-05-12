@@ -19,15 +19,17 @@ class Account:
 		if self.balance >= value:
 			self.balance -= value
 			self.operations.append(['Saque', value])
+			print('Saque realizado com sucesso!')
 		else:
-			print("Valor indisponivel para saque")
+			print("Valor indisponível para saque no momento.")
 
 	def deposit_money(self, value):
 		self.balance += value
-		self.operations.append(['Deposito', value])
+		self.operations.append(['Depósito', value])
+		print('Depósito realizado com sucesso!')
 
 	def extract(self):
-		print('Extrato da CC: %s' % self.number)
+		print('\nExtrato da CC: %s' % self.number)
 		
 		for op in self.operations:
 			print("%s: R$%10.2f" % (op[0], op[1]))
