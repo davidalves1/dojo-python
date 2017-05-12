@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 page = requests.get('http://beans.itcarlow.ie/prices.html')
 soup = BeautifulSoup(page.content, 'html.parser')
 
-print(soup.prettify())
+# print(soup.prettify())
 
 # parent - itens acima do item atual
 # children - itens abaixo do item atual
