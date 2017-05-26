@@ -18,7 +18,7 @@ print('Acertô mizeravi!')
 
 arr = [0, '1', 'teste', 3.55, 42, 'bla'*3]
 
-for i in [0, '1', 'teste', 3.55, 42, 'bla'*3]:
+for i in arr:
 	print(i)
 
 # forEach
@@ -27,6 +27,7 @@ for k, v in enumerate(arr):
 
 music = 'As luzes estão piscando, o jukebox tocando Amado Batista e o pau tá quebrando ...'
 print(music)
+print(music.find(','))
 # n <= text < m
 print(music[:15])
 print(music[15:30])
